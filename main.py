@@ -1,6 +1,6 @@
-# built in function
+# define function 
+# indent rule
+def say_hello(who):
+  print("hello ", who)
 
-age = "18"
-print(type(age))
-n_age = int(age)
-print(type(n_age))
+say_hello("ho")
