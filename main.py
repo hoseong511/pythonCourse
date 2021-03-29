@@ -1,6 +1,36 @@
-# keyword Argument; 따로 지정하지 않는다면 순서를 지켜 인자에 넣어주어야한다.
-def say_hello(name, age):
-  return f"Hello {name} you are {age} years old"
+def plus(x, y):
+    x, y = map(int, [x, y])
+    print(x + y)
 
-hello = say_hello(age="12", name="hoho")
-print(hello)
+
+def diff(x, y):
+    x, y = map(int, [x, y])
+    print(x - y)
+
+
+def mul(x, y):
+    x, y = map(int, [x, y])
+    print(x * y)
+
+
+def div(x, y):
+    x, y = map(int, [x, y])
+    print(x / y)
+
+
+def floor(x, y):
+    x, y = map(int, [x, y])
+    print(x // y)
+
+
+def remainder(x, y):
+    x, y = map(int, [x, y])
+    print(x % y)
+
+
+def power(x, y):
+    x, y = map(int, [x, y])
+    print(x**y)
+
+
+mul(2, "5")
