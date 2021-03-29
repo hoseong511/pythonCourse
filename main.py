@@ -1,6 +1,8 @@
-# define function 
-# indent rule
-def say_hello(who):
-  print("hello ", who)
+# calculator; defalut value
+def plus(a, b):
+  print(a + b)
 
-say_hello("ho")
+def minus(a, b=0):
+  print( a - b )
+
+plus(2, 5)
