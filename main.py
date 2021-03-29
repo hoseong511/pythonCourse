@@ -1,8 +1,5 @@
 # calculator; defalut value
-def plus(a, b):
-  print(a + b)
+def say_hello(name="anonymous"):
+  print("hello", name)
 
-def minus(a, b=0):
-  print( a - b )
-
-plus(2, 5)
+say_hello()
