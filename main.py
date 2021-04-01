@@ -1,14 +1,12 @@
-# or and, elif
-def age_check(age):
-  print(f"you are {age}")
-  if age < 18:
-    print("you cant drink")
+# modules
+from math import ceil, fsum # 모듈내에 필요한 함수만  import 하자
+from calc import plus
 
-  elif age == 18 or age == 19:
-    print("you are new to this!")
-  elif age > 20 and age < 25:
-    print("you are still kind of young")
-  else:
-    print("enjoy your drink")
+print(ceil(1.2))
 
-age_check(19)
+print(fsum([1,2,3,4,5,6,7,7]))
+
+print(plus(1,3))
+
+# print 함수가 무한한 매개변수를 갖는 이유
+
