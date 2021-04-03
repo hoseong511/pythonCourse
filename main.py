@@ -3,4 +3,5 @@ from indeed import extract_indeed_pages,extract_indeed_jobs
 
 result = extract_indeed_pages()
 
-extract_indeed_jobs(result)
+indeed_job = extract_indeed_jobs(result)
+print(indeed_job)
