@@ -6,11 +6,11 @@ from math import ceil
 os.system('clear')
 
 LIMIT = 50
-search = input("search? ")
+search = input("Indeed! search for? ")
 INDEED_URL = f"https://kr.indeed.com/jobs?q={search}&limit={LIMIT}&radius=25"
 
 
-def extract_indeed_pages():
+def get_last_page():
     result = requests.get(INDEED_URL)
 
     soup = BeautifulSoup(result.text, "html.parser")
@@ -52,7 +52,7 @@ def extract_indeed_jobs(last_page):
     os.system('clear')
     jobs = []
     for pages in range(last_page):
-      print(f"Scrapping page: {pages}")
+      print(f"Scrapping INDEED page: {pages}")
       result = requests.get(f"{INDEED_URL}&start={pages*LIMIT}")
       # result = requests.get(f"{INDEED_URL}&start={0}")
       soup = BeautifulSoup(result.text, "html.parser")
@@ -63,4 +63,7 @@ def extract_indeed_jobs(last_page):
         jobs.append(job)    
     return jobs
 
-    
+def get_jobs():
+  result = get_last_page()
+  jobs = extract_indeed_jobs(result)
+  return jobs
