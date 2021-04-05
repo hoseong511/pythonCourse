@@ -8,3 +8,4 @@ so_jobs = get_so_jobs()
 jobs = so_jobs + indeed_jobs
 save_to_file(jobs)
 # print(indeed_jobs)
+
