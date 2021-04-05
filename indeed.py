@@ -49,6 +49,7 @@ def extract_job(html):
 
 
 def extract_indeed_jobs(last_page):
+<<<<<<< HEAD
     os.system('clear')
     jobs = []
     for pages in range(last_page):
@@ -67,3 +68,24 @@ def get_jobs():
   result = get_last_page()
   jobs = extract_indeed_jobs(result)
   return jobs
+=======
+  os.system('clear')
+  # for pages in range(last_page):
+  # result = requests.get(f"{INDEED_URL}&start={pages*LIMIT}")
+  result = requests.get(f"{INDEED_URL}&start={0}")
+  soup = BeautifulSoup(result.text, "html.parser")
+  results = soup.find_all("div", {"class": "jobsearch-SerpJobCard"})
+  # print(results)  
+  for result in results:
+    title = result.find("h2", {"class":"title"}).find('a')["title"]
+    
+    company = result.find("span", {"class":"company"}).text.strip()
+    if company == "":
+      company = "이름누락-----------------------------------------------------"
+    print(f"{title}, {company}")
+    
+  
+
+    
+  return
+>>>>>>> f21f6ac48d2600788d7711c8e40ef018af9476f6
